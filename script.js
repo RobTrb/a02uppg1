@@ -121,6 +121,10 @@ function toggleCompleted(index){
     itemLabel.classList.add("completed");
     itemLabel.classList.add("completedAnimation");
     setTimeout(() => {itemLabel.classList.remove("completedAnimation")}, 300);
+   } else
+   {
+    itemLabel.setAttribute("class", "")
    }
    
+   completeCounter.innerHTML = todoList.getElementsByClassName("completed").length + " " + "completed";
 };
