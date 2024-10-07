@@ -1,0 +1,207 @@
+html, body {
+    height: 100%;
+    margin: 0;
+   }
+   
+   body {
+       background-image: linear-gradient(180deg, #fcbebe, rgba(207, 67, 88, 0.89));
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+   }
+          
+   .main {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       position: absolute;
+       font-family: verdana;
+       font-weight: bold;
+       margin-top: 5px;
+       margin-left: 28%;
+       width: 600px;
+       padding: 1px;
+       background-color: #FFFFFF;
+       animation: load-page 600ms;
+       animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+       
+   }
+
+   .todoHead {
+    font-family: "Times new roman";
+    font-size: 3rem;
+    margin-bottom: 5px;
+    
+   }
+   
+   form {
+    display: flex;
+    flex-direction: row;
+    font-family: verdana;
+    
+   }
+
+   #inputForm {
+       background-color: rgb(255, 255, 255);
+       color: black;
+       border-width: 1px;
+       padding: 2px;
+       display: flex;
+       border-style: solid;
+       border-color: rgb(0, 0, 0);
+       border-radius: 5%;
+       width: 270px;
+       font-family: verdana;
+       font-weight: bold;
+    }
+
+    #inputForm:focus {
+        border-color: blue;
+    }
+
+    #submitButton {
+        background-color: rgb(216, 216, 216);
+        color: black;
+        border-style: solid;
+        border-width: 1px;
+        margin-left: 5px;
+        border-radius: 5%;
+    }
+   
+   #placeholder {
+       margin-top: 10px;
+       position: flex;
+       text-align: center;
+       color: red;
+       opacity: 0%;   
+   }
+   
+   @keyframes placeholder-flash {
+       0%{opacity: 0%;}
+       25%{opacity: 100%;}
+       50%{opacity: 0%;}
+       75%{opacity: 100%}
+       100%{opacity:0%}
+   }
+   
+   #placeholder.placeholder-flash{
+       position: flex;
+       text-align: left;
+       color: red;
+       opacity: 0%;
+       margin-top: 10px;
+       animation: placeholder-flash 1s;    
+   }  
+   
+   input[type="text"] {
+       height: 30px;
+       outline: 0;
+       border: none;
+       font-size: 1rem;
+       font-family: "verdana";
+       color: rgb(0, 0, 0);
+       flex-grow: 1;
+   }
+   
+   button {
+       font-size: 1.5rem;
+       background-color: #FFFFFF;
+       border: none;
+       color: grey    
+   }
+   button:hover {
+       color: rgba(0, 0, 0, 0.637)
+   }
+   
+   .todo {
+       background-color: #FFFFFF;
+       border-radius: 5px;
+       margin-top: 20px;
+       
+       height: 100%;
+   }
+   
+   ul {
+       padding-left: 10px;
+       list-style: none;
+       margin-top: 10px;
+   }
+   
+   li {
+       display: flex;
+       align-items: center;
+       padding: 5px 0;
+       font-size: 30px;
+       color: rgb(0, 0, 0);
+       font-weight: bold;
+       font-weight: normal;
+       
+       
+   }
+   
+   .liAddAnimation {
+    animation: add-li 500ms;
+   }
+
+
+
+   span:hover {
+    text-decoration: line-through;
+   }
+     
+   .completedAnimation {
+   
+   text-decoration: line-through;
+   animation: text-complete 300ms;
+   animation-fill-mode: forwards;
+   }
+
+   .completed {
+    color: grey;
+    text-decoration: line-through;
+   }
+   
+   .deleteItem {
+   position: flex;
+   margin-left: 5px;
+   font-weight: bold;
+   }
+
+   .deleteItem:hover {
+    color: black
+   }
+   
+   @keyframes load-page {
+       0% {
+           transform: translateY(-100%);
+           opacity: 0%;
+       }
+       100% {
+           transform: translateY(0);
+           opacity: 100%;
+       }
+   }
+   
+   @keyframes text-complete {
+       0% {
+           color: black;
+       }
+       100% {
+           color: grey;
+   
+       }
+   }
+   
+   @keyframes add-li {
+       0% {
+           transform: translateY(100%);
+           opacity: 0%;
+       }
+       100% {
+           transform: translateY(0);
+           opacity: 100%;
+       }
+   }
+
+   .test {
+    color: red
+   }
