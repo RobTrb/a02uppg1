@@ -99,10 +99,11 @@ html, body {
    
    @keyframes placeholder-flash {
        0%{opacity: 0%;}
-       25%{opacity: 100%;}
-       50%{opacity: 0%;}
-       75%{opacity: 100%}
-       100%{opacity:0%}
+       20%{opacity: 100%;}
+       40%{opacity: 0%;;}
+       60%{opacity: 100%;}
+       80%{opacity:0%;}
+       100%{opacity: 100%;}
    }
    
    #placeholder.placeholder-flash{
@@ -111,7 +112,8 @@ html, body {
        color: red;
        opacity: 0%;
        margin-top: 10px;
-       animation: placeholder-flash 1s;    
+       animation: placeholder-flash 1s;
+       animation-fill-mode: forwards;          
    }  
    
    input[type="text"] {
@@ -136,16 +138,14 @@ html, body {
    
    .todo {
        background-color: #FFFFFF;
-       border-radius: 5px;
-       margin-top: 20px;
-       
+       border-radius: 5px;     
        height: 100%;
    }
    
    ul {
        padding-left: 10px;
        list-style: none;
-       margin-top: 10px;
+       margin-top: 5px;
    }
    
    li {

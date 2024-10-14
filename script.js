@@ -93,12 +93,14 @@ if (newTask !== "")
    //pass the current index to the removefrom array and remove
    deleteTask.addEventListener("click", () => removeFromArray(currentIndex)); //push index to remove from removeFromArray function and remove
    completeCounter.innerHTML = todoList.getElementsByClassName("completed").length + " " + "completed";
+   placeHolder.classList.remove("placeholder-flash");
 
 } 
 else 
 { //red text to appear if there is nothing written
+   placeHolder.classList.remove("placeholder-flash"); 
    placeHolder.classList.add("placeholder-flash");
-   setTimeout(() => {placeHolder.classList.remove("placeholder-flash")}, 1000);      
+   //setTimeout(() => {placeHolder.classList.remove("placeholder-flash")}, 1000);      
 };
 //clear input field
 inputText.value =""
